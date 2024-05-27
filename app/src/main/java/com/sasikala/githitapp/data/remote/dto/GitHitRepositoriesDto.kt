@@ -8,22 +8,6 @@ data class GitHitRepositoriesDto(
     val total_count: Int
 )
 
-fun GitHitRepositoriesDto.toGitHitRepo(): List<GitHitRepo>{
-
-    return items.map { item ->
-        GitHitRepo(
-            id = item.id,
-            name = item.name ?: "",
-            description = item.description ?: "",
-            language = item.language ?: "",
-            full_name = item.full_name ?: ""
-        )
-    }
-}
-
-
-
-
 data class Owner(
     val avatar_url: String,
     val events_url: String,
